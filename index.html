@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTA</title>
+    <script src="./main.js"></script>
+    <style>
+        .box-2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .box-2 div{
+            display: flex;
+            align-items: center;
+            gap: 10%;
+        }
+        .box-2 .nota{
+            font-size: 25px;
+            color: black;
+            margin: 0%;
+        }
+        header{
+            display: flex;
+            justify-content: center;
+        }
+        fieldset{
+            margin: 0%;
+        }
+        .box-2 hr{
+            width: 63%;
+            margin-top: -2%;
+            margin-right: -8%;
+        }
+        .data{
+            margin-right: 5%;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: min-content;
+            margin: 0%;
+        }
+        .info{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .box h1{
+            font-size: 300%;
+        }
+        .title{
+            margin-top: -10%;
+            text-align: center;
+        }
+        .title hr{
+            margin-top: -8%;
+        }
+        .cadastro{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .box-3{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        table, td, th{
+            border-collapse: collapse;
+            border: solid 1px;
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+        }
+        .cadastro{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        table{
+            width: 100%;
+            margin-top: 1%;
+        }
+        .nome{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;   
+        }
+        .nome .nome-2{
+            border-bottom: solid 1px ;
+        }
+        .cpf-rg{
+            display: flex;
+            justify-content: space-between;
+        }
+        .cpf{
+            border-bottom: solid 1px;
+        }
+        .rg{
+            border-bottom: solid 1px;
+        }
+        .end{
+            border-bottom: solid 1px;
+        }
+        .end-fone{
+            display: flex;
+            justify-content: space-between;
+        }
+        .end{
+            border-bottom: solid 1px;
+        }
+        .fone{
+            border-bottom: solid 1px;
+        }
+        .notas{
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="box-cadastro">
+        <form>
+            <table class="valores">
+                <tr>
+                    <th>Nome</th>
+                    <td><input type="name" id="name" onblur="names()"></td>
+                </tr>
+                <tr>
+                    <th>CPF</th>
+                    <td><input type="name" id="cpf" oninput="cpf(this)"></td>
+                </tr>
+                <tr>
+                    <th>R.G</th>
+                    <td><input type="name" id="rg" oninput="rg(this)"></td>
+                </tr>
+                <tr>
+                    <th>End</th>
+                    <td><input type="name" id="end"></td>
+                </tr>
+                <tr>
+                    <th>Cidade</th>
+                    <td><input type="name" id="cidade"></td>
+                </tr>
+                <tr>
+                    <th>Fone</th>
+                    <td><input type="name" id="fone"></td>
+                </tr>
+            </table>
+            <input type="submit" onblur="nomes">
+        </form>
+    </div>
+
+    <div class="notas">
+        <header>
+            <fieldset class="box">
+                <div class="title">
+                    <h1>AGRO JFRANCO</h1>
+                    <hr>
+                </div>
+                <div class="info">
+                    <strong>VENDAS E COMPRA DE PRODUTOS AGROPECUÁRIO</strong>
+                    <span>Milho, Soja, Farelo de Trigo, Torta de Algodão,</span>
+                    <span>Arame Liso, Grampo, Arame Motto etc.</span>
+                    <span>Rua Castro Alves 85 - Centro - Serrolândia - Bahia</span>
+                    <strong>Fone (71) 9952-2634</strong>
+                </div>
+            </fieldset>
+            <fieldset class="box-2">
+                <p class="nota">N O T A</p>
+                <div>
+                    <h3>Nº</h3>
+                    <p>0.0000</p>
+                </div>
+                <div class="data">
+                    <span>DATA</span>
+                    <div>
+                        <td>25</td>/<td>05</td>/<td>2023</td>
+                    </div>
+                </div>
+                <hr>
+            </fieldset>
+        </header>
+
+        <div class="nome">
+            <strong>Nome:</strong>
+                <span class="nome-2" id="name2"></span>
+        </div>
+        <div class="cpf-rg">
+            <div>
+                <strong>CPF:</strong>
+                <span class="cpf" id="cpf-2"></span>
+            </div>
+            <div>
+                <strong>RG:</strong>
+                <span class="rg" id="rg-2"></span>
+            </div>
+        </div>
+        <div>
+            <strong>End:</strong>
+            <span class="end" id="end-2"></span>
+        </div>
+        <div class="end-fone">
+            <div>
+                <strong>Cidade:</strong>
+                <span id="cidade-2" class="cidade"></span>
+            </div>
+            <div>
+                <strong>Fone:</strong>
+                <span class="fone" id="fone-2"></span>
+            </div>
+        </div>
+
+        <footer class="cadastro">
+            <table class="tabela">
+                <tr>
+                    <th>Quant</th>
+                    <th>Descriminação</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <td id="q1">0</td>
+                    <td id="d1"></td>
+                    <td id="v1"></td>
+                </tr>
+                <tr>
+                    <td id="q2">0</td>
+                    <td id="d2"></td>
+                    <td id="v2"></td>
+                </tr>
+                <tr>
+                    <td id="q3">0</td>
+                    <td id="d3"></td>
+                    <td id="v3"></td>
+                </tr>
+                <tr>
+                    <td id="q4">0</td>
+                    <td id="d4"></td>
+                    <td id="v4"></td>
+                </tr>
+                <tr>
+                    <td id="q5">0</td>
+                    <td id="d5"></td>
+                    <td id="v5"></td>
+                </tr>
+                <tr>
+                    <td id="q6">0</td>
+                    <td id="d6"></td>
+                    <td id="v6"></td>
+                </tr>
+                <tr>
+                    <td id="q7">0</td>
+                    <td id="d7"></td>
+                    <td id="v7"></td>
+                </tr>
+                <tr>
+                    <td id="q8">0</td>
+                    <td id="d8"></td>
+                    <td id="v8"></td>
+                </tr>
+                <tr>
+                    <td id="q9">0</td>
+                    <td id="d9"></td>
+                    <td id="v9"></td>
+                </tr>
+                <tr>
+                    <td id="q10">0</td>
+                    <td id="d10"></td>
+                    <td id="v10"></td>
+                </tr>
+                <tr>
+                    <td id="q11">0</td>
+                    <td id="d11"></td>
+                    <td id="v11"></td>
+                </tr>
+                <tr>
+                    <td id="q12">0</td>
+                    <td id="d12"></td>
+                    <td id="v12"></td>
+                </tr>
+                <tr>
+                    <td id="q13">0</td>
+                    <td id="d13"></td>
+                    <td id="v13"></td>
+                </tr>
+            </table>
+            <table class="resultado">
+                <tr>
+                    <th>RESULTADO</th>
+                    <td>0</td>
+                </tr>
+            </table>
+        </footer>
+    </div>
+</body>
+</html>
